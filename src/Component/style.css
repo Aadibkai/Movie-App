@@ -1,0 +1,217 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+body {
+  background-color: #152c2c;
+}
+.Header {
+  background-color: rgba(212, 248, 248, 0.788);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  list-style: none;
+  margin-right: 1rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: rgb(12, 11, 11);
+  font-size: 24px;
+  padding: 0 0.2rem 0.6rem;
+  font-weight: 400;
+  position: relative;
+}
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transition: all 0.1s;
+  height: 1.5px;
+  width: 0;
+  transform: translateX(-50%);
+  background-color: rgb(7, 7, 7);
+  transition: all 0.3 ease-in-out;
+}
+nav ul li a:hover:before {
+  width: 100%;
+}
+nav ul li a:focus {
+  background-color: rgb(155, 155, 155);
+  opacity: 0.2px;
+  border-radius: 20px;
+}
+.inputText::placeholder {
+  color: white;
+}
+.search_bar {
+  border: 1px solid rgb(5, 0, 0);
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 4px;
+  height: 25px;
+  display: flex;
+}
+.search_bar_input {
+  background-color: transparent;
+  border: none;
+  padding: 2px;
+  color: #0c0c0c;
+  outline: none;
+}
+.search_bar_Icon_Wrapper {
+  fill: #152c2c;
+}
+.Container {
+  margin: auto;
+  width: 86%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.movie {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  width: 250px;
+  border-color: rgb(50 43 43);
+  margin: 1rem;
+  border-radius: 8px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  transition: all 0.5s;
+}
+.movie:hover {
+  box-shadow: 0 5px 10px rgba(129, 129, 129, 0.5);
+  scale: 1.10;
+}
+.movie .poster {
+  width: 100%;
+  height: 93%;
+}
+.movie-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.movie-detail {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.movie-detail .box {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.movie-detail .title {
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+  color: #333;
+}
+.movie-detail .overview {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-height: 100%;
+  background-color: #ebeeee;
+  opacity: 0.9;
+  color: white;
+  box-sizing: border-box;
+  padding: 1rem;
+  transition: all 0.4s ease-in-out;
+  overflow-y: auto;
+  transform: translateY(101%);
+}
+.movie-detail:hover .overview {
+  transform: translateY(0%);
+}
+.rating {
+  background-color: #ebeeee;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: 1px solid #ebeeee;
+  box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+.movie-detail .overview {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-height: 100%;
+  background-color: rgb(50 43 43);
+  opacity: 0.9;
+  color: white;
+  box-sizing: border-box;
+  padding: 1rem;
+  transition: all 0.4s ease-in-out;
+  overflow-y: auto;
+  transform: translateY(101%);
+}
+.movie-detail:hover .overview {
+  transform: translateY(02%);
+}
+.rating {
+  background-color: rgb(235, 238, 238);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: 1px solid rgb(235, 238, 238);
+  box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  right: 5px;
+  bottom: 30px;
+}
+/* @media (max-width: 900px) {
+  .Header {
+    background-color: rgb(50 43 43);
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  nav ul li {
+    padding-top: 10px;
+  }
+  .search-btn {
+    width: 200px;
+    margin-right: 100px;
+  }
+} */
+.img {
+  height: 16px;
+  width: 22px;
+  border-radius: 10px;
+}
